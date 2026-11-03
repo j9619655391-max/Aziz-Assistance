@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-08-01T22:24:08.962Z",
+  "backlog_items": [
+    {
+      "id": "TASK-OUTREACH-01",
+      "title": "Interactive Candidate Email Outreach Template Visualizer & Preview",
+      "business_value": "High - Allows recruiters to review and customize AI-generated candidate outreach emails prior to SMTP delivery via Hostinger.",
+      "technical_value": "High - Integrates NotificationService and HostingerService with explicit UI template rendering and variable substitution.",
+      "priority": "Highest Priority",
+      "dependencies": [
+        "FEAT-REC-01",
+        "FEAT-REC-02"
+      ],
+      "estimated_hours": 1.5,
+      "risk": "Low",
+      "acceptance_criteria": [
+        "Recruiter can view generated candidate email body in visual editor modal",
+        "Variables like {candidate_name}, {job_title}, and {company_name} auto-populate",
+        "SMTP dispatch via HostingerService succeeds and updates outreach status in repository"
+      ],
+      "definition_of_done": "UI modal added to RecruitmentIntelligencePanel, backend API endpoint verified, test suite passes clean.",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "TASK-OBS-02",
+      "title": "Real-time Metrics Auto-Refresh Polling in Diagnostic Panel",
+      "business_value": "Medium - Displays live CPU/Memory and token metrics dynamically.",
+      "technical_value": "Medium - Connects ObservabilityModule to DiagnosticPanel with polling.",
+      "priority": "Medium",
+      "dependencies": [
+        "FEAT-OBS-01"
+      ],
+      "estimated_hours": 1,
+      "risk": "Low",
+      "acceptance_criteria": [
+        "DiagnosticPanel polls metrics every 10 seconds"
+      ],
+      "definition_of_done": "Metrics refresh automatically without user refresh click.",
+      "status": "BACKLOG"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # 1. High-Performance PostgreSQL Database
+  postgres_db:
+    image: postgres:15-alpine
+    container_name: aziz_platform_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: aziz_admin
+      POSTGRES_PASSWORD: aziz_secure_password_99
+      POSTGRES_DB: aziz_ai_platform
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aziz_admin -d aziz_ai_platform"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 2. Redis Caching and Queue Broker
+  redis_cache:
+    image: redis:alpine
+    container_name: aziz_platform_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # 3. Main Node.js API Service / Frontend Application Container
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aziz_platform_app
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+      redis_cache:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - REPOSITORY_TYPE=POSTGRES
+      - DATABASE_URL=postgresql://aziz_admin:aziz_secure_password_99@postgres_db:5432/aziz_ai_platform
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - JWT_SECRET=${JWT_SECRET:-aziz_jwt_secret_token_default_10293}
+      - HOSTINGER_SMTP_HOST=smtp.hostinger.com
+      - HOSTINGER_SMTP_PORT=465
+      - HOSTINGER_SMTP_SECURE=true
+    volumes:
+      - app_storage:/data/storage
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3000/api/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  app_storage:
+    driver: local

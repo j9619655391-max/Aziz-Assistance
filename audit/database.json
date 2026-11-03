@@ -1,0 +1,19 @@
+{
+  "adapter": "PostgresRepository",
+  "fallback_adapter": "InMemoryRepository",
+  "tables": [
+    "system_logs",
+    "memories",
+    "job_profile",
+    "freelance_profile",
+    "sample_gigs",
+    "recruiter_contacts",
+    "hostinger_config",
+    "gmail_sessions",
+    "scan_logs",
+    "metrics",
+    "dynamic_collections"
+  ],
+  "acid_support": true,
+  "migrations": "Automated DDL execution on startup in runMigrations()"
+}

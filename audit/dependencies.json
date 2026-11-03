@@ -1,0 +1,15 @@
+{
+  "internal_imports_count": 576,
+  "external_package_dependencies": [
+    "express",
+    "@google/genai",
+    "pg",
+    "jsonwebtoken",
+    "nodemailer",
+    "react",
+    "lucide-react",
+    "motion",
+    "vite"
+  ],
+  "graph_summary": "Fully mapped import dependency matrix"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "REST API Gateway & Security Audit",
+    "workflow": "User requests security audit from UI or API endpoint",
+    "ui_file": "src/components/DiagnosticPanel.tsx",
+    "endpoint": "/api/security/audit",
+    "backend": "src/domains/infrastructure/SecurityService.ts",
+    "api_tested": true,
+    "api_statusCode": 200,
+    "ui_browser_automated": false,
+    "verdict": "PARTIAL",
+    "notes": "API and Backend execution verified via HTTP request (Status 200). Full end-to-end browser GUI automation unverified due to headless browser absence in shell."
+  },
+  {
+    "name": "Multimodal Document Knowledge Base API",
+    "workflow": "User requests document list or uploads files",
+    "ui_file": "src/components/MemoryVault.tsx",
+    "endpoint": "/api/knowledge/documents",
+    "backend": "src/domains/knowledge/DocumentIngestionService.ts",
+    "api_tested": true,
+    "api_statusCode": 200,
+    "ui_browser_automated": false,
+    "verdict": "PARTIAL",
+    "notes": "API endpoint verified via HTTP GET (Status 200). Document listing returns valid JSON payload. Interactive drag-and-drop browser render unverified."
+  },
+  {
+    "name": "Candidate Sourcing & AI Resume Parser",
+    "workflow": "User submits resume text or file for extraction",
+    "ui_file": "src/components/RecruitmentIntelligencePanel.tsx",
+    "endpoint": "/api/parse-resume",
+    "backend": "src/domains/employment/MatchingService.ts",
+    "api_tested": true,
+    "api_statusCode": 200,
+    "ui_browser_automated": false,
+    "verdict": "PARTIAL",
+    "notes": "API endpoint verified via HTTP POST (Status 200). Skill extraction JSON payload returned. Browser DOM click stream unverified."
+  }
+]

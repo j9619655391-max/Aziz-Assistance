@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Outreach Email Template Visualizer & Generator",
+    "workflow": "Recruiter generates personalized outreach email template",
+    "ui_file": "src/components/RecruitmentIntelligencePanel.tsx",
+    "endpoint": "/api/recruitment/outreach/generate",
+    "backend": "src/domains/recruitment/RecruitmentRouter.ts",
+    "api_tested": true,
+    "api_statusCode": 404,
+    "ui_browser_automated": false,
+    "verdict": "UNVERIFIED",
+    "notes": "API endpoint returned 404 on unseeded mock ID 'cand_test'. Requires real seeded database records for end-to-end confirmation."
+  },
+  {
+    "name": "Interactive Browser UI Rendering & Click Workflows",
+    "workflow": "Full visual UI rendering, animation transitions, and mouse click interactions across 13 panels",
+    "ui_file": "src/App.tsx & all components",
+    "endpoint": "N/A (Client-side React rendering in browser iframe)",
+    "backend": "N/A",
+    "api_tested": false,
+    "api_statusCode": null,
+    "ui_browser_automated": false,
+    "verdict": "UNVERIFIED",
+    "notes": "Environment limitation: No headless browser driver (e.g., Playwright/Puppeteer) available in container shell to record DOM click streams or screenshot artifacts."
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "total_directories": 33,
+  "total_files": 303,
+  "total_source_files": 173,
+  "total_test_files": 35,
+  "total_documentation_files": 113,
+  "total_configuration_files": 18,
+  "total_docker_files": 2,
+  "total_lines_of_code": 65015,
+  "total_size_bytes": 2909123,
+  "average_file_size_bytes": 9601,
+  "largest_files": [
+    {
+      "path": "src/components/JobAgentPanel.tsx",
+      "size_bytes": 232100,
+      "lines": 4352
+    },
+    {
+      "path": "package-lock.json",
+      "size_bytes": 221507,
+      "lines": 6195
+    },
+    {
+      "path": "bun.lock",
+      "size_bytes": 111509,
+      "lines": 0
+    },
+    {
+      "path": "src/components/RecruitmentIntelligencePanel.tsx",
+      "size_bytes": 75033,
+      "lines": 1650
+    },
+    {
+      "path": "src/components/StudioPanel.tsx",
+      "size_bytes": 64788,
+      "lines": 1241
+    },
+    {
+      "path": "server.ts",
+      "size_bytes": 52538,
+      "lines": 1510
+    },
+    {
+      "path": "src/components/ApplicationTrackerPanel.tsx",
+      "size_bytes": 40736,
+      "lines": 822
+    },
+    {
+      "path": "src/components/DiagnosticPanel.tsx",
+      "size_bytes": 35565,
+      "lines": 663
+    },
+    {
+      "path": "docs/AKDS.md",
+      "size_bytes": 33348,
+      "lines": 529
+    },
+    {
+      "path": "src/domains/employment/EmploymentV2Service.ts",
+      "size_bytes": 30051,
+      "lines": 761
+    }
+  ],
+  "scan_timestamp": "2026-08-01T22:08:10.528Z"
+}

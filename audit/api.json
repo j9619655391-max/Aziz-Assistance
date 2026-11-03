@@ -1,0 +1,92 @@
+{
+  "endpoints": [
+    {
+      "path": "/api/health",
+      "method": "GET",
+      "auth": "None",
+      "rate_limit": "150/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/knowledge/ingest",
+      "method": "POST",
+      "auth": "None",
+      "rate_limit": "15/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/knowledge/search",
+      "method": "GET",
+      "auth": "None",
+      "rate_limit": "150/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/knowledge/documents",
+      "method": "GET",
+      "auth": "None",
+      "rate_limit": "150/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/knowledge/document/:id",
+      "method": "DELETE",
+      "auth": "None",
+      "rate_limit": "150/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/parse-resume",
+      "method": "POST",
+      "auth": "None",
+      "rate_limit": "15/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/jobs/compare",
+      "method": "POST",
+      "auth": "None",
+      "rate_limit": "150/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/terminal/execute",
+      "method": "POST",
+      "auth": "None",
+      "rate_limit": "150/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/security/audit",
+      "method": "GET",
+      "auth": "None",
+      "rate_limit": "150/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/hostinger/config",
+      "method": "POST",
+      "auth": "None",
+      "rate_limit": "150/15m",
+      "status": "implemented",
+      "tested": true
+    },
+    {
+      "path": "/api/hostinger/test",
+      "method": "POST",
+      "auth": "None",
+      "rate_limit": "150/15m",
+      "status": "implemented",
+      "tested": true
+    }
+  ]
+}

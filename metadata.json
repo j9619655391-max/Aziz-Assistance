@@ -1,0 +1,6 @@
+{
+  "name": "Aziz Personal assistant",
+  "description": "An interactive DevOps AI Assistant, security-first terminal emulator, memory vault, systems hardening workspace, and SPRINT 23 Enterprise Observability Platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,11 @@
+{
+  "smtpHost": "smtp.hostinger.com",
+  "smtpPort": 465,
+  "smtpUser": "info@aaditechs.in",
+  "smtpPassword": "Abdul@267@xyz",
+  "brandName": "AadiTechs Support Solutions",
+  "websiteUrl": "aaditechs.in",
+  "notificationTriggerEmail": "j9619655391@gmail.com",
+  "isConfigured": true,
+  "lastTriggerStatus": "Handshake Error"
+}
